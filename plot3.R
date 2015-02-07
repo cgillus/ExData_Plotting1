@@ -4,7 +4,7 @@ consumption <- read.table(file = "household_power_consumption.txt", header = TRU
 consumption$Time <- strptime(paste(consumption$Date,consumption$Time), format = "%d/%m/%Y %H:%M:%S")
 consumption$Date <- as.Date(consumption$Date,format = "%d/%m/%Y")
 
-png("plot3.png", height = 480, width = 480, bg = "transparent")
+png("plot3.png", height = 480, width = 480, bg = "white")
 
 with(consumption, { 
     plot(consumption$Time, consumption$Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
